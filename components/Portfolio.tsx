@@ -43,7 +43,7 @@ const Portfolio: React.FC = () => {
             </p>
           </div>
           <a 
-            href="https://hafizhuzaifa.com/portfolio" 
+            href="https://huzaifa-works.great-site.net/" 
             className="flex items-center space-x-2 text-white font-bold hover:text-blue-400 transition-colors group"
           >
             <span>View Full Portfolio</span>
