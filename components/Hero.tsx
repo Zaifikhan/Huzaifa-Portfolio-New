@@ -27,8 +27,8 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-5xl md:text-7xl lg:text-8xl font-black leading-none mb-6 tracking-tight"
           >
-            <span className="block">Turning Clicks into</span>
-            <span className="text-gradient block">Clients & Money Machines</span>
+            <span className="block">🚀 Turning Clicks into Clients</span>
+            <span className="text-gradient block">& Websites into Money Machines</span>
           </motion.h1>
 
           <motion.p

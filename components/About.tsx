@@ -31,9 +31,9 @@ const About: React.FC = () => {
           >
             <div className="relative z-10 rounded-3xl overflow-hidden border-2 border-gray-800 bg-gray-900 group">
               <img 
-                src="https://picsum.photos/seed/huzaifa/800/1000" 
-                alt="Huzaifa" 
-                className="w-full grayscale group-hover:grayscale-0 transition-all duration-700"
+                src="https://images.unsplash.com/photo-1628157588553-5eeea00af15c?q=80&w=1780&auto=format&fit=crop" 
+                alt="Huzaifa 3D Avatar" 
+                className="w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent opacity-60"></div>
             </div>
