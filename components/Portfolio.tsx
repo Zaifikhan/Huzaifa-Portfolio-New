@@ -22,7 +22,8 @@ const Portfolio: React.FC = () => {
     {
       title: "E-Commerce Growth Machine",
       category: "WordPress / Sales Funnel",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?auto=format&fit=crop&w=800&q=80",
+      // Updated image URL to fix missing image issue
+      image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?auto=format&fit=crop&w=800&q=80",
       description: "A high-performance online store built for a fashion retailer, focusing on speed and conversion rate optimization.",
       challenge: "The client was losing 70% of mobile traffic due to 5s+ load times and a clunky 5-step checkout process.",
       solution: "We re-architected the site using a lightweight custom theme, implemented server-side caching, and reduced checkout to a seamless 1-page experience.",

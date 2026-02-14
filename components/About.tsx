@@ -29,20 +29,25 @@ const About: React.FC = () => {
             viewport={{ once: true }}
             className="lg:w-1/2 relative"
           >
-            <div className="relative z-10 rounded-3xl overflow-hidden border-2 border-gray-800 bg-gray-900 group">
+            {/* User provided image: ensure 'huzaifa.jpg' is in the public folder */}
+            <div className="relative z-10 rounded-3xl overflow-hidden border-2 border-gray-800 bg-gray-900 group aspect-[3/4]">
               <img 
-                src="https://images.unsplash.com/photo-1628157588553-5eeea00af15c?q=80&w=1780&auto=format&fit=crop" 
-                alt="Huzaifa 3D Avatar" 
-                className="w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                src="/huzaifa.jpg" 
+                alt="Huzaifa Profile" 
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent opacity-60"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent opacity-40"></div>
             </div>
             
             {/* Experience Badge */}
-            <div className="absolute -bottom-6 -right-6 glass p-6 rounded-2xl border border-blue-500/30 z-20">
-              <div className="text-4xl font-black text-blue-400">Years</div>
-              <div className="text-gray-400 font-medium">Of Experience</div>
-            </div>
+            <motion.div 
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute -bottom-6 -right-6 glass p-6 rounded-2xl border border-blue-500/30 z-20 shadow-xl backdrop-blur-md"
+            >
+              <div className="text-4xl font-black text-blue-400">4+</div>
+              <div className="text-gray-400 font-medium">Years Exp.</div>
+            </motion.div>
           </motion.div>
 
           <motion.div 

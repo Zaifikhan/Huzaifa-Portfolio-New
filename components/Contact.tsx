@@ -4,6 +4,27 @@ import { motion } from 'framer-motion';
 import { Send, Mail, MapPin, Phone, Github, Linkedin, Twitter } from 'lucide-react';
 
 const Contact: React.FC = () => {
+  const contactDetails = [
+    { 
+      icon: <Mail />, 
+      label: 'Email', 
+      value: 'hafizhuzaifa2005@gmail.com',
+      href: 'mailto:hafizhuzaifa2005@gmail.com'
+    },
+    { 
+      icon: <MapPin />, 
+      label: 'Location', 
+      value: 'Swabi, KP',
+      href: null
+    },
+    { 
+      icon: <Phone />, 
+      label: 'WhatsApp', 
+      value: '+923 149525452',
+      href: 'https://wa.me/923149525452'
+    }
+  ];
+
   return (
     <section id="contact" className="py-24 relative">
       <div className="blob bottom-20 right-20"></div>
@@ -24,18 +45,20 @@ const Contact: React.FC = () => {
             </p>
 
             <div className="space-y-6">
-              {[
-                { icon: <Mail />, label: 'Email', value: 'hello@huzaifa.com' },
-                { icon: <MapPin />, label: 'Location', value: 'Remote / Worldwide' },
-                { icon: <Phone />, label: 'WhatsApp', value: '+1 (234) 567-890' }
-              ].map((item, i) => (
+              {contactDetails.map((item, i) => (
                 <div key={i} className="flex items-center space-x-4">
-                  <div className="w-12 h-12 glass rounded-xl flex items-center justify-center text-blue-400 border border-gray-800">
+                  <div className="w-12 h-12 glass rounded-xl flex items-center justify-center text-blue-400 border border-gray-800 flex-shrink-0">
                     {item.icon}
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <div className="text-xs text-gray-500 uppercase tracking-widest">{item.label}</div>
-                    <div className="font-bold">{item.value}</div>
+                    {item.href ? (
+                      <a href={item.href} className="font-bold hover:text-blue-400 transition-colors block truncate">
+                        {item.value}
+                      </a>
+                    ) : (
+                      <div className="font-bold">{item.value}</div>
+                    )}
                   </div>
                 </div>
               ))}
