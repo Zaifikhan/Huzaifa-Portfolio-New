@@ -32,7 +32,7 @@ const About: React.FC = () => {
             {/* User provided image: ensure 'huzaifa.jpg' is in the public folder */}
             <div className="relative z-10 rounded-3xl overflow-hidden border-2 border-gray-800 bg-gray-900 group aspect-[3/4]">
               <img 
-                src="huzaifa.jpg" 
+                src="https://drive.google.com/uc?export=view&id=19gTI8BTPZnWJMAPsNPIuyYJYe2dw8XDP" 
                 onError={(e) => {
                   // Fallback to a placeholder if the local image fails to load
                   e.currentTarget.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=800&q=80";
