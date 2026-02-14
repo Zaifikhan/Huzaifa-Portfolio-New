@@ -25,6 +25,12 @@ const Contact: React.FC = () => {
     }
   ];
 
+  const socialLinks = [
+    { Icon: Github, href: "https://github.com/Zaifikhan" },
+    { Icon: Linkedin, href: "https://www.linkedin.com/in/hafiz-huzaifa/" },
+    { Icon: Twitter, href: "#" }
+  ];
+
   return (
     <section id="contact" className="py-24 relative">
       <div className="blob bottom-20 right-20"></div>
@@ -65,10 +71,12 @@ const Contact: React.FC = () => {
             </div>
 
             <div className="mt-12 flex space-x-4">
-              {[Github, Linkedin, Twitter].map((Icon, i) => (
+              {socialLinks.map(({ Icon, href }, i) => (
                 <a 
                   key={i} 
-                  href="#" 
+                  href={href}
+                  target={href !== '#' ? "_blank" : undefined}
+                  rel={href !== '#' ? "noopener noreferrer" : undefined}
                   className="w-12 h-12 glass rounded-xl flex items-center justify-center hover:bg-blue-600 transition-all border border-gray-800"
                 >
                   <Icon className="w-5 h-5" />
